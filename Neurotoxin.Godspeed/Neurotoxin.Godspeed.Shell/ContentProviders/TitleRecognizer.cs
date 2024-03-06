@@ -407,7 +407,7 @@ namespace Neurotoxin.Godspeed.Shell.ContentProviders
             try
             {
                 var webClient = new WebClient();
-                var json = webClient.DownloadString(string.Format("http://xboxunity.net/Resources/Lib/TitleList.php?search={0}", item.Name));
+                var json = webClient.DownloadString(string.Format("http://xboxunity.net/Resources/Lib/TitleList.php?search={0}&category=0", item.Name));
                 if (!string.IsNullOrEmpty(json))
                 {
                     var unityResponse = json.FromJson<UnityResponse>();
